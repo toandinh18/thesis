@@ -34,8 +34,8 @@ INCLUDEPATH += /usr/local/include/opencv4
 DEPENDPATH += /usr/local/include
 
 #config for java
-#INCLUDEPATH += /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/include
-#INCLUDEPATH += /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/include/linux
+INCLUDEPATH += /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre/lib/arm/server
+INCLUDEPATH += /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/include/linux
 
 #lib for opencv
 
@@ -53,7 +53,7 @@ LIBS += /usr/local/lib/libsphinxbase.so.3.0.0
 LIBS += /usr/local/lib/libpocketsphinx.so.3.0.0
 LIBS += /usr/local/lib/libsphinxad.so.3.0.0
 #libs for java
-#LIBS += /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre/lib/arm/server/libjvm.so
+LIBS += -L/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre/lib/arm/server/ -ljvm
 
 HEADERS  += mainwindow.h \
     network_firebase.h
@@ -62,3 +62,8 @@ FORMS    += mainwindow.ui
 
 RESOURCES += \
     image.qrc
+
+#unix:!macx: LIBS += -L$$PWD/../../../../usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre/lib/arm/server/ -ljvm
+
+#INCLUDEPATH += $$PWD/../../../../usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre/lib/arm/server
+#DEPENDPATH += $$PWD/../../../../usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre/lib/arm/server
