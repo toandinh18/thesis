@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1091</width>
-    <height>654</height>
+    <width>1181</width>
+    <height>806</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -167,7 +167,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>40</y>
+        <y>50</y>
         <width>871</width>
         <height>471</height>
        </rect>
@@ -181,8 +181,8 @@ p, li { white-space: pre-wrap; }
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>790</x>
-         <y>10</y>
+         <x>770</x>
+         <y>40</y>
          <width>71</width>
          <height>71</height>
         </rect>
@@ -200,21 +200,62 @@ p, li { white-space: pre-wrap; }
       <widget class="QTextBrowser" name="textBrowser">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>40</x>
          <y>20</y>
-         <width>661</width>
-         <height>111</height>
+         <width>691</width>
+         <height>131</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: #549eff</string>
+        <string notr="true">background-color: #549eff;
+padding: 10px 5px;
+border: 3px solid black;
+border-radius: 20px;</string>
        </property>
        <property name="html">
         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'PibotoLt'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#000000;&quot;&gt;Bạn vui lòng dành chút thời gian thực hiện bài khảo sát chất lượng trường học giúp chúng mình nhé ( bạn có thể trả lời bằng giọng nói bằng cách nói &amp;quot;Yes&amp;quot; hay &amp;quot;No&amp;quot;) :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#ffffff;&quot;&gt;Bạn vui lòng dành chút thời gian thực hiện bài khảo sát chất lượng trường học giúp chúng mình nhé ( bạn có thể trả lời bằng giọng nói bằng cách nói &amp;quot;Yes&amp;quot; hay &amp;quot;No&amp;quot;) :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>250</y>
+         <width>131</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #549eff;
+padding: 10px 5px;
+border: 3px solid black;
+border-radius: 20px;</string>
+       </property>
+       <property name="text">
+        <string>YES</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>250</y>
+         <width>131</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #549eff;
+padding: 10px 5px;
+border: 3px solid black;
+border-radius: 20px;</string>
+       </property>
+       <property name="text">
+        <string>NO</string>
        </property>
       </widget>
      </widget>
@@ -226,7 +267,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1091</width>
+     <width>1181</width>
      <height>29</height>
     </rect>
    </property>

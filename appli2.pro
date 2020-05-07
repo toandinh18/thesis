@@ -25,11 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    network_firebase.cpp
+    network_firebase.cpp \
+    studying.cpp \
+    fnallayout.cpp
 
 #install the enssensial C++ lib
 
 INCLUDEPATH += /usr/local/include/pocketsphinx
+INCLUDEPATH += /usr/local/include/sphinxbase
 INCLUDEPATH += /usr/local/include/opencv4
 DEPENDPATH += /usr/local/include
 
@@ -49,21 +52,22 @@ LIBS += /usr/local/lib/libopencv_dnn.so.4.0
 LIBS += /usr/local/lib/libraspicam.so.0.1
 LIBS += /usr/local/lib/libraspicam_cv.so
 #libs for pocketsphinx _ STT
-LIBS += /usr/local/lib/libsphinxbase.so.3.0.0
-LIBS += /usr/local/lib/libpocketsphinx.so.3.0.0
-LIBS += /usr/local/lib/libsphinxad.so.3.0.0
+LIBS += /usr/local/lib/libsphinxbase.so.3
+LIBS += /usr/local/lib/libpocketsphinx.so.3
+LIBS += /usr/local/lib/libsphinxad.so.3
 #libs for java
 LIBS += -L/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre/lib/arm/server/ -ljvm
 
 HEADERS  += mainwindow.h \
-    network_firebase.h
+    network_firebase.h \
+    include.h \
+    studying.h \
+    fnallayout.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    studying.ui \
+    fnallayout.ui
 
 RESOURCES += \
     image.qrc
 
-#unix:!macx: LIBS += -L$$PWD/../../../../usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre/lib/arm/server/ -ljvm
-
-#INCLUDEPATH += $$PWD/../../../../usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre/lib/arm/server
-#DEPENDPATH += $$PWD/../../../../usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre/lib/arm/server

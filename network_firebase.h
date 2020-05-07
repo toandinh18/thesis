@@ -2,25 +2,19 @@
 #define NETWORK_FIREBASE_H
 
 #include <QMainWindow>
-#include <QObject>
-#include <QDebug>
-#include <QNetworkAccessManager>
-#include <QUrl>
-#include <QNetworkRequest>
-#include <QNetworkReply>
-#include <QScriptValueIterator>
-#include <QtScript/QScriptEngine>
+#include "include.h"
+
 class Network_firebase : public QObject
 {
     Q_OBJECT
 public:
-    QNetworkReply *currentReply;
     Network_firebase();
+    void GetJson();
 
 signals:
 
 public slots:
-    void onResult(QNetworkReply* reply);
+
 };
 
 #endif // NETWORK_FIREBASE_H

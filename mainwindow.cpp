@@ -9,7 +9,6 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 
     ui->setupUi(this);
-    Network_firebase *test = new Network_firebase();
     ui->stackedWidget->setCurrentIndex(0);
     string text = "hello";
     text = "flite -t " + text;
@@ -65,8 +64,11 @@ void MainWindow::on_pushButton_clicked()
             }
         }
         else {
-            if (x == 0)
+            if (x == 0) {
                 qDebug() << " finish" ;
+                //break next page
+                ui->stackedWidget->setCurrentIndex(1);
+            }
         }
         cvtColor(frame1, frame1, COLOR_BGR2RGB);
         ui->camera->setPixmap(QPixmap::fromImage(QImage(frame1.data, frame1.cols, frame1.rows, frame1.step, QImage::Format_RGB888)));
@@ -74,8 +76,6 @@ void MainWindow::on_pushButton_clicked()
 
         if((waitKey(30) >= 0))
             break;
-        //break next page
-        ui->stackedWidget->setCurrentIndex(1);
     }
     cap.release();
 }
