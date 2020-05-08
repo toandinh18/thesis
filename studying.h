@@ -15,8 +15,12 @@ public:
     explicit studying(QWidget *parent = 0);
     ~studying();
 
+private slots:
+    void next_page();
+
 private:
     Ui::studying *ui;
+
 };
 
 #endif // STUDYING_H

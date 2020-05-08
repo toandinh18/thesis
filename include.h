@@ -1,6 +1,9 @@
 #ifndef INCLUDE_H
 #define INCLUDE_H
 
+//define model pocketsphinx direct
+#define MODELDIR "/home/pi/STT/pocketsphinx/model"
+
 // include opencv library
 #include "opencv4/opencv2/opencv.hpp"
 #include "opencv4/opencv2/highgui/highgui.hpp"
@@ -11,6 +14,11 @@
 #include "opencv4/opencv2/videoio.hpp"
 #include "raspicam/raspicam_cv.h"
 
+// include library for pocketsphinx
+#include <pocketsphinx.h>
+#include <sphinxbase/ad.h>
+#include <sphinxbase/err.h>
+
 // include Qt librarry
 #include <QCamera>
 #include <QScrollArea>
@@ -20,6 +28,13 @@
 #include <QVideoWidget>
 #include <QCameraViewfinder>
 #include <QNetworkAccessManager>
+#include <QAudioInput>
+#include <QAudioFormat>
+#include <QAudioDeviceInfo>
+#include <QAudioRecorder>
+#include <QGroupBox>
+#include <QButtonGroup>
+
 #include <QVBoxLayout>
 #include <QObject>
 #include <QDebug>
@@ -29,6 +44,7 @@
 #include <QByteArray>
 #include <QNetworkAccessManager>
 #include <QUrl>
+#include <QThread>
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include <QScriptValueIterator>
@@ -36,12 +52,15 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
+#include <QRadioButton>
+
 
 // include c++ standard library
 #include <string.h>
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <assert.h>
 #include <stdio.h>
 
 

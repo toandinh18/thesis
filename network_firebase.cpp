@@ -6,34 +6,46 @@ Network_firebase::Network_firebase() {
 }
 
 void Network_firebase::GetJson(){
-    QNetworkAccessManager networkManager;
-    QUrl url("https://thesis-final123.firebaseio.com/sport.json");
-    QNetworkRequest PutRequest;
-    PutRequest.setUrl(url);
-    QNetworkReply *currentReply = networkManager.get(PutRequest);
-    // parsing JSON
-    if(currentReply->error() != QNetworkReply::NoError)
-        qDebug("Error in reply");
-    QString data = (QString) currentReply->readAll();
-    qDebug() << "got data" << data;
+    //    Network_firebase check;
+    //    QNetworkAccessManager m_manager;
+    //    // make request
+    //     QNetworkRequest request = QNetworkRequest(QUrl("https://thesis-final123.firebaseio.com/resource.json"));
+    //      QNetworkReply* reply = m_manager.get(request);
+    //      // connect to signal  when its done using lambda)
+    //      QObject::connect(reply, &QNetworkReply::finished, [reply]() {
+    //        // read data
+    //        QString ReplyText = reply->readAll();
+    //        // qDebug() << ReplyText;
+    //        // ask doc to parse it
+    //        QJsonDocument doc = QJsonDocument::fromJson(ReplyText.toUtf8());
+    //        // we know first element in file is object, to try to ask for such
 
-//    connect(&networkManager,SIGNAL(finished(QNetworkReply*)),
-//            this, SLOT(onResult(QNetworkReply*)));
+    //        QString data = doc.toJson();
+    //        QJsonObject obj = doc.object();
+    //        QJsonArray array = obj["items"].toArray();
+    //        qDebug() << reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+    //        foreach (const QJsonValue & value, array) {
+    //            QJsonObject obj = value.toObject();
+    //            QString login = obj["Login"].toString();
+    //            qDebug() << "login" << login;
+    //        }
+    //        qDebug() << "get data" << data;
+    //        reply->deleteLater(); // make sure to clean up
+    //      });
+
+    //      request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    //      QJsonObject obj;
+    //      obj.insert("Email","tona");
+    //      obj.insert("Login","status");
+
+    //      QNetworkReply *postRequest = m_manager.post(request, QJsonDocument(obj).toJson());
+    //      QObject::connect(postRequest,&QNetworkReply::finished, [postRequest]() {
+    //          QJsonDocument doc = QJsonDocument::fromJson(postRequest->readAll());
+    //          QJsonObject obj = doc.object();
+    //          if (obj.value("status").toString() == "ok") {
+    //            qDebug() << "post finish";
+    //          } else {
+    //              qWarning() << "ERROR" << obj.value("error").toString();
+    //          }
+    //      });
 }
-
-//void Network_firebase::onResult(QNetworkReply* reply) {
-//    if (currentReply->error() != QNetworkReply::NoError)
-//        qDebug("Error in reply");  // ...only in a blog post
-//    QString data = (QString) reply->readAll();
-//    qDebug() << data;
-//    QScriptEngine engine;
-//    QScriptValue result = engine.evaluate(data);
-//    QScriptValue entries = result.property("sport");
-//    qDebug() << entries;
-
-//    QScriptValueIterator it(entries);
-//    while (it.hasNext()) {
-//           it.next();
-//           QScriptValue entry = it.value();
-//    }
-//}

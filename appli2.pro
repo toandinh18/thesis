@@ -27,7 +27,8 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     network_firebase.cpp \
     studying.cpp \
-    fnallayout.cpp
+    speech2text.cpp \
+    final.cpp
 
 #install the enssensial C++ lib
 
@@ -62,11 +63,12 @@ HEADERS  += mainwindow.h \
     network_firebase.h \
     include.h \
     studying.h \
-    fnallayout.h
+    speech2text.h \
+    final.h
 
 FORMS    += mainwindow.ui \
     studying.ui \
-    fnallayout.ui
+    final.ui
 
 RESOURCES += \
     image.qrc
