@@ -10,14 +10,14 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 
     ui->setupUi(this);
-    ui->stackedWidget->setCurrentIndex(1);
+    ui->stackedWidget->setCurrentIndex(0);
     ui->stackedWidget->insertWidget(2,&studying_page);
     ui->stackedWidget->insertWidget(3,&final_page);
-    string text = "hello";
-    text = "flite -t " + text;
-    const char *command  = text.c_str();
-    system(command);
-    qDebug() << "load ok flite";
+//    string text = "hello";
+//    text = "flite -t " + text;
+//    const char *command  = text.c_str();
+//    system(command);
+//    qDebug() << "load ok flite";
 //    speech2text *stt = new speech2text();
 //    stt->configSTT();
 }
