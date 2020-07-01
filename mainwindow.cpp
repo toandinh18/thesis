@@ -10,9 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 
     ui->setupUi(this);
-    ui->stackedWidget->setCurrentIndex(0);
-    ui->stackedWidget->insertWidget(2,&studying_page);
-    ui->stackedWidget->insertWidget(3,&final_page);
+    ui->stackedWidget->insertWidget(1, &page1);
 //    string text = "hello";
 //    text = "flite -t " + text;
 //    const char *command  = text.c_str();
@@ -51,7 +49,7 @@ void MainWindow::on_pushButton_clicked()
     Mat frame;
     //tien trinh cho tung frame anh
     qDebug("start recognise");
-    int x = 20;
+    int x = 10;
     while(1) {
         cap.grab();
         cap.retrieve(frame);
@@ -84,12 +82,3 @@ void MainWindow::on_pushButton_clicked()
     cap.release();
 }
 
-
-void MainWindow::on_pushButton_2_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(2);
-}
-void MainWindow::on_pushButton_3_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(3);
-}

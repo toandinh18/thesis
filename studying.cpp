@@ -6,7 +6,7 @@ studying::studying(QWidget *parent) :
     ui(new Ui::studying)
 {
     ui->setupUi(this);
-    ui->stackedWidget->setCurrentIndex(0);
+    //ui->stackedWidget->setCurrentIndex(0);
     QButtonGroup *gr1 = new QButtonGroup();
     QVBoxLayout *vbox1 = new QVBoxLayout;
 //    vbox1->addWidget(radioButton_1);

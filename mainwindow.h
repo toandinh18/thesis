@@ -3,9 +3,8 @@
 
 #include <QMainWindow>
 #include "include.h"
-#include <studying.h>
+#include <first_page.h>
 #include <speech2text.h>
-#include <final.h>
 
 namespace Ui {
 class MainWindow;
@@ -23,14 +22,9 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_3_clicked();
-
 private:
     Ui::MainWindow *ui;
-    studying studying_page;
-    Final final_page;
+    first_page page1;
 };
 
 #endif // MAINWINDOW_H

@@ -2,7 +2,8 @@
 #define INCLUDE_H
 
 //define model pocketsphinx direct
-#define MODELDIR "/home/pi/STT/pocketsphinx/model"
+#define MODELDIR "/home/pi/STT_2/pocketsphinx/model"
+#define PATH "/home/pi/STT_2"
 
 // include opencv library
 #include "opencv4/opencv2/opencv.hpp"
@@ -59,9 +60,11 @@
 #include <string.h>
 #include <fstream>
 #include <sstream>
+#include <stdio.h>
+#include <string.h>
+#include <assert.h>
 #include <iostream>
 #include <assert.h>
-#include <stdio.h>
 
 
 using namespace std;
